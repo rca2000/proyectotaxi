@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'services/service'
-
-  get 'cars/car'
-
+  #get 'services/service'
+  get 'service', controller: :services, action: :service, alias: 'service'
+  #get 'cars/car'
+  get 'car', controller: :cars, action: :car, alias: 'car'
   get 'home/index'
   root 'home#index'
 
