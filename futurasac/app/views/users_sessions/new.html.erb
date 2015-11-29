@@ -1,0 +1,11 @@
+<%= form_tag users_sessions_path, method: :post do %>
+    <div class="tmInput">
+        <%= label_tag :username %><br />
+        <%= text_field_tag :username %>
+    </div>
+    <div class="tmInput">
+        <%= label_tag :password %><br />
+        <%= text_field_tag :password %>
+    </div>
+    <a href="#" class="btn" data-type="submit">Ingresar</a>
+<% end %>

@@ -1,10 +1,30 @@
 Rails.application.routes.draw do
+  resources :districts
+=begin
+    get "/districts"
+    post "/districts"
+    delete "/districts"
+    get "/districts/:id"
+    get "/districts/new"
+    get "/districts/:id/edit"
+    patch "/districts/:id"
+    put "/districts/:id"
+=end
+  
+  resources :users
+
+  #get 'reservations/reservation'
+  get 'reservation', controller: :reservations, action: :reservation, alias: 'reservation'
   #get 'services/service'
   get 'service', controller: :services, action: :service, alias: 'service'
   #get 'cars/car'
   get 'car', controller: :cars, action: :car, alias: 'car'
   get 'home/index'
   root 'home#index'
+  
+  #resources :users_sessions
+  #match 'login' => 'user_sessions#new', as: login
+  #match 'logout' => 'user_sessions#destroy', as: logout
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

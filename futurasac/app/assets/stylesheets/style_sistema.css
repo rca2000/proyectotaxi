@@ -1,0 +1,108 @@
+.body_sistema {
+    width: 960px;
+    margin: auto;
+    background: transparent;
+}
+.header_sistema {
+    margin: auto;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #dcdcdc;
+}
+.footer_sistema {
+    background-color: #4a4a4a;
+    margin: auto;
+    border-radius: 5px;
+    text-align: center;
+}
+.divmenu_sistema {
+    position: relative;
+    padding: 0px 0 0 0;
+}
+.nav_ul {
+    margin-top: 0px;
+    margin-left: 35px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    overflow: hidden;
+}
+.nav_ul_li {
+    float: left;
+    list-style: none;
+    margin: 1px 10px 10px 0px;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    background: #4a4a4a;
+    width: 200px;
+    height: 30px;
+    padding-top: 10px;
+    padding-left: 30px;
+    color: white;
+}
+.nav_ul_li_a {
+    color: #fff;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+.nav_ul_li_a:hover {
+    color: #ffff00;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+.cuerpo_detalle {
+    padding-left: 20px;
+}
+.ladoizquierdo {
+    background-color: #ffff00;
+	/*para Firefox*/
+	-moz-border-radius: 5px;
+	/*para Safari y Chrome*/
+	-webkit-border-radius: 5px;
+	/*para Opera IE*/
+    border-radius: 5px;
+    float: left;
+    padding: 20px;
+    width: 210px;
+    display:block;
+    height: 450px;
+}
+.cuerpo {
+    background-color: #ffffe0;
+	/*para Firefox*/
+	-moz-border-radius: 5px;
+	/*para Safari y Chrome*/
+	-webkit-border-radius: 5px;
+	/*para Opera IE*/
+    border-radius: 5px;
+    float: right;
+    padding-top: 20px;
+    width: 945px;
+    display:block;
+    height: 470px;
+}
+.ladoizquierdo form {
+    padding-bottom: 20px;
+}
+.ladoizquierdo label {
+    font-size: 12px;
+    color: #fff;
+    margin: 5px 0;
+}
+.ladoizquierdo .marco {
+    background: #54671E;
+	/*para Firefox*/
+	-moz-border-radius: 5px;
+	/*para Safari y Chrome*/
+	-webkit-border-radius: 5px;
+	/*para Opera IE*/
+    border-radius: 5px;
+    padding: 20px;
+}
+

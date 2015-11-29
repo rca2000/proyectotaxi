@@ -1,0 +1,26 @@
+<div class="cuerpo_detalle">
+<p id="notice"><%= notice %></p>
+<h4>Listado de Distritos</h4>
+<table>
+  <thead>
+    <tr>
+      <th>Descripción</th>
+      <th>Estado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @districts.each do |district| %>
+      <tr>
+        <td><%= district.description %></td>
+        <td><%= district.status %></td>
+        <td><%= link_to 'Show', district %></td>
+        <td><%= link_to 'Edit', edit_district_path(district) %></td>
+        <td><%= link_to 'Destroy', district, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to 'Crear Distrito', new_district_path %>
+</div>

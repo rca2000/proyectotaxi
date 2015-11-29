@@ -15,6 +15,7 @@ Rails.application.config.assets.version = '1.0'
  Rails.application.config.assets.precompile += %w( camera.css )
  Rails.application.config.assets.precompile += %w( owl.carousel.css )
  Rails.application.config.assets.precompile += %w( style.css )
+ Rails.application.config.assets.precompile += %w( style_sistema.css )
  Rails.application.config.assets.precompile += %w( jquery.js )
  Rails.application.config.assets.precompile += %w( jquery-migrate-1.2.1.js )
  Rails.application.config.assets.precompile += %w( script.js )
