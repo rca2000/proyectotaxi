@@ -12,14 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.label 'Descripción', {:class => "label_sistema"} %>
+    <%= f.text_field :description, {:class => "input_text_sistema"} %>
   </div>
+  <br>
   <div class="field">
-    <%= f.label :status %><br>
+    <%= f.label 'Estado', {:class => "label_sistema"} %>
     <%= f.check_box :status %>
   </div>
+  <br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit '  Grabar  ', {:class => "input_bottom_sistema"} %>
   </div>
 <% end %>

@@ -1,17 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :districts
-=begin
-    get "/districts"
-    post "/districts"
-    delete "/districts"
-    get "/districts/:id"
-    get "/districts/new"
-    get "/districts/:id/edit"
-    patch "/districts/:id"
-    put "/districts/:id"
-=end
-  
-  resources :users
 
   #get 'reservations/reservation'
   get 'reservation', controller: :reservations, action: :reservation, alias: 'reservation'

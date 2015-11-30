@@ -1,7 +1,7 @@
-<div class="cuerpo_detalle">
+
 <p id="notice"><%= notice %></p>
-<h4>Listado de Distritos</h4>
-<table>
+<h3 class="h3_sistema">Listado de Distritos</h3>
+<table id="t01" style="width:40%;">
   <thead>
     <tr>
       <th>Descripción</th>
@@ -14,13 +14,12 @@
       <tr>
         <td><%= district.description %></td>
         <td><%= district.status %></td>
-        <td><%= link_to 'Show', district %></td>
-        <td><%= link_to 'Edit', edit_district_path(district) %></td>
-        <td><%= link_to 'Destroy', district, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Visualizar', district %></td>
+        <td><%= link_to 'Editar', edit_district_path(district) %></td>
+        <td><%= link_to 'Eliminar', district, method: :delete, data: { confirm: 'Esta seguro de eliminar?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 <br>
-<%= link_to 'Crear Distrito', new_district_path %>
-</div>
+<%= link_to 'Nuevo Distrito', new_district_path, {:class => "a_sistema"} %>

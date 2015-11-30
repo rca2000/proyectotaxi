@@ -41,36 +41,12 @@
 </head>
 <body class="page1" id="top">
     <div class="main">
-		<header>
-			<div class="menu_block ">
-				<div class="container_12">
-					<div class="grid_12">
-						<nav class="horizontal-nav full-width horizontalNav-notprocessed">
-							<ul class="sf-menu">
-								<li><%= link_to 'Inicio', root_path %></li>
-								<li><%= link_to 'Vehículos', car_path %></li>
-								<li><%= link_to 'Servicios', service_path %></li>
-								<li><%= link_to 'Reservar', reservation_path %></li>
-								<li><a href="sesion.html">Sesión</a></li>
-							</ul>
-						</nav>
-						<div class="clear"></div>
-					</div>
-					<div class="clear"></div>
-				</div>
-			</div>
-			<div class="container_12">
-				<div class="grid_12">
-					<h1>
-						<%= image_tag("logo.png", :alt => "") %>
-					</h1>
-				</div>
-			</div>
-			<div class="clear"></div>
-		</header>
-	
+		<%= render "partials/navigation" %>
+		
+	    <p class="notice"><%= notice %></p>
+	  	<p class="alert"><%= alert %></p>
+	  	
 	    <%= yield %>
-    
     </div>
 
 	<footer>

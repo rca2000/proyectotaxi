@@ -30,7 +30,7 @@ class DistrictsController < ApplicationController
 
     respond_to do |format|
       if @district.save
-        format.html { redirect_to @district, notice: 'District was successfully created.' }
+        format.html { redirect_to @district, notice: 'Distrito creado correctamente.' }
         format.json { render :show, status: :created, location: @district }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class DistrictsController < ApplicationController
   def update
     respond_to do |format|
       if @district.update(district_params)
-        format.html { redirect_to @district, notice: 'District was successfully updated.' }
+        format.html { redirect_to @district, notice: 'Distrito actualizado correctamente.' }
         format.json { render :show, status: :ok, location: @district }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class DistrictsController < ApplicationController
   def destroy
     @district.destroy
     respond_to do |format|
-      format.html { redirect_to districts_url, notice: 'District was successfully destroyed.' }
+      format.html { redirect_to districts_url, notice: 'Distrito eliminado con éxito.' }
       format.json { head :no_content }
     end
   end
