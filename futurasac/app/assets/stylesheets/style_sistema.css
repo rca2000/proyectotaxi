@@ -178,6 +178,7 @@ table#t01 th	{
     font-weight: bold;
     padding: 10px;
     outline: none;
+    cursor: pointer;
 }
 .input_bottom_sistema:hover{
     color: #00FF00;

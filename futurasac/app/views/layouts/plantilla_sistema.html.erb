@@ -4,9 +4,6 @@
     <title>Futura Taxi SAC</title>
 	<meta charset="utf-8">
 	<meta name = "format-detection" content = "telephone=no" />
-	<%= stylesheet_link_tag    'booking', media: 'all', 'data-turbolinks-track' => true %>
-	<%= stylesheet_link_tag    'camera', media: 'all', 'data-turbolinks-track' => true %>
-	<%= stylesheet_link_tag    'owl.carousel', media: 'all', 'data-turbolinks-track' => true %>
 	<%= stylesheet_link_tag    'style', media: 'all', 'data-turbolinks-track' => true %>
 	<%= stylesheet_link_tag    'style_sistema', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'jquery', 'data-turbolinks-track' => true %>
@@ -55,8 +52,8 @@
 		
 	    	<div class="ladoderecho">
 	        	<%= yield %>
-	    		<p class="notice"><%= notice %></p>
-			  	<p class="alert"><%= alert %></p>
+	    		<p style="color: #FF4500;"><%= notice %></p>
+			  	<p style="color: #FF4500;"><%= alert %></p>
 	    	</div>
 	    </div>
 	    
