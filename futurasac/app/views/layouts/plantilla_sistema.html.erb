@@ -49,38 +49,19 @@
 		</header>
 		<div class="cuerpo_sistema">
 			<div class="ladoizquierdo">
-				<div>
-					<nav>
-						<ul class="nav_ul">
-							<li class="nav_ul_li"><%= link_to 'Clientes', root_path, {:class => "nav_ul_li_a"} %></li>
-							<li class="nav_ul_li"><%= link_to 'Servicios', car_path, {:class => "nav_ul_li_a"} %></li>
-							<li class="nav_ul_li"><%= link_to 'Tarifas', service_path, {:class => "nav_ul_li_a"} %></li>
-							<li class="nav_ul_li"><%= link_to 'Distritos', reservation_path, {:class => "nav_ul_li_a"} %></li>
-							<li class="nav_ul_li"><%= link_to 'Choferes', reservation_path, {:class => "nav_ul_li_a"} %></li>
-							<li class="nav_ul_li"><%= link_to 'Vehiculos', reservation_path, {:class => "nav_ul_li_a"} %></li>
-						</ul>
-					</nav>
-					<div class="clear"></div>
-				</div>
+				<%= render "partials/navigation_sistema" %>
+    
 			</div>
 		
 	    	<div class="ladoderecho">
 	        	<%= yield %>
+	    		<p class="notice"><%= notice %></p>
+			  	<p class="alert"><%= alert %></p>
 	    	</div>
 	    </div>
 	    
-    	<footer class="footer_sistema">
-    		<div class="container_12">
-    			<div class="grid_12">
-    				<div class="copy">
-    					<div class="st1_sistema">
-    					<div class="brand">Futura<span class="color1">T</span>axi </div>
-    					&copy; 2015	| Derechos Reservados</div>
-    				</div>
-    			</div>
-    			<div class="clear"></div>
-    		</div>
-    	</footer>
+	    <%= render "partials/footer_sistema" %>
+
 	</div>
 </body>
 </html>

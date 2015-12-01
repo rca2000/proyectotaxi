@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Futura Taxi SAC</title>
+  	<title>Futura Taxi SAC</title>
 	<meta charset="utf-8">
 	<meta name = "format-detection" content = "telephone=no" />
 	<%= stylesheet_link_tag    'booking', media: 'all', 'data-turbolinks-track' => true %>
@@ -41,32 +41,9 @@
 </head>
 <body class="page1" id="top">
     <div class="main">
-		<%= render "partials/navigation" %>
-		
-	    <p class="notice"><%= notice %></p>
-	  	<p class="alert"><%= alert %></p>
-	  	
 	    <%= yield %>
     </div>
-
-	<footer>
-		<div class="container_12">
-			<div class="grid_12">
-				<div class="f_phone"><span>Llamar al:</span> + 1800 559 6580</div>
-				<div class="socials">
-					<a href="#" class="fa fa-twitter"></a>
-					<a href="#" class="fa fa-facebook"></a>
-					<a href="#" class="fa fa-google-plus"></a>
-				</div>
-				<div class="copy">
-					<div class="st1">
-					<div class="brand">Futura<span class="color1">T</span>axi </div>
-					&copy; 2015	| Derechos Reservados</div>
-				</div>
-			</div>
-			<div class="clear"></div>
-		</div>
-	</footer>
+	
 	<script>
 		$(function (){
 			$('#bookingForm').bookingForm({

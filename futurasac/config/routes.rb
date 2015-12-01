@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  #get 'systems/system'
+  get 'system', controller: :systems, action: :system, alias: 'system'
+
   devise_for :users
   resources :districts
 
