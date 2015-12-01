@@ -7,19 +7,19 @@
       <%= devise_error_messages! %>
       <div class="field">
         <%= f.label :name, "Nombre", {:style => "color: #00008B;"} %><br />
-        <%= f.name :name, autofocus: true %>
+        <%= f.text_field :name, autofocus: true %>
       </div>
       <div class="field">
         <%= f.label :lastname, "Apellidos", {:style => "color: #00008B;"} %><br />
-        <%= f.lastname :lastname %>
+        <%= f.text_field :lastname %>
       </div>
       <div class="field">
         <%= f.label :identitydocument, "DNI", {:style => "color: #00008B;"} %><br />
-        <%= f.identitydocument :identitydocument %>
+        <%= f.text_field :identitydocument %>
       </div>
       <div class="field">
         <%= f.label :birthdate, "Fecha Nacimiento", {:style => "color: #00008B;"} %><br />
-        <%= f.birthdate :birthdate %>
+        <%= f.date_select(:birthdate, :start_year => Date.current.year, :end_year => 1920, prompt: { day: 'Día', month: 'Mes', year: 'Año' }, :order => [:day, :month, :year], :use_month_names => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre'] ) %>
       </div>
       <div class="field">
         <%= f.label :email, "Correo Electrónico", {:style => "color: #00008B;"} %><br />

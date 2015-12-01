@@ -17,7 +17,7 @@
     background-color: #dcdcdc;
 }
 .cuerpo_sistema {
-    padding-bottom: 580px;
+    padding-bottom:610px;
 }
 .ladoizquierdo {
     background-color: #ffff00;
@@ -28,9 +28,9 @@
 	/*para Opera IE*/
     border-radius: 5px;
     float: left;
-    width: 210px;
+    width: 17%;
     display:block;
-    height: 490px;
+    height: 550px;
     padding-top: 20px;
 }
 .ladoderecho {
@@ -42,9 +42,9 @@
 	/*para Opera IE*/
     border-radius: 5px;
     float: right;
-    width: 955px;
+    width: 80%;
     display: block;
-    height: 490px;
+    height: 550px;
     padding-top: 0px;
     padding-left: 30px;
 }
