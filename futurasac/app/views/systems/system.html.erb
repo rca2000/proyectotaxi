@@ -1,2 +1,5 @@
-<h1>Systems#system</h1>
-<p>Find me in app/views/systems/system.html.erb</p>
+<% if user_signed_in? %>
+    <h3 class="h3_sistema">Bienvenido al Sistema de Taxi</h3>
+<% else %>
+    <h3 class="h3_sistema"></h3>
+<% end %>

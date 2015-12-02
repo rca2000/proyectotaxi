@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   get 'system', controller: :systems, action: :system, alias: 'system'
 
   devise_for :users
+  
+  #devise_for :users, :path => 'user' do
+  #  get '/user/sign_out' => 'devise/sessions#destroy' 
+  #end
+  
   resources :districts
 
   #get 'reservations/reservation'
