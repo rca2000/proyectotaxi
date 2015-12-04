@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
   #get 'systems/system'
-  get 'system', controller: :systems, action: :system, alias: 'system'
+  #get 'system', controller: :systems, action: :system, alias: 'system'
 
   devise_for :users
-  
-  #devise_for :users, :path => 'user' do
-  #  get '/user/sign_out' => 'devise/sessions#destroy' 
-  #end
-  
+
   resources :districts
 
   #get 'reservations/reservation'
@@ -17,7 +13,12 @@ Rails.application.routes.draw do
   #get 'cars/car'
   get 'car', controller: :cars, action: :car, alias: 'car'
   get 'home/index'
-  root 'home#index'
+  #root 'home#index'
+  root 'home#index', constraints: lambda { |request| !request.env['warden'].user }
+  root to: 'home#index', as: 'passenger_root',  constraints: lambda { |request| !request.env['warden'].user.passenger? }
+  root to: 'systems#system', as: 'driver_root', constraints: lambda { |request| !request.env['warden'].user.driver? }
+  root to: 'systems#system', as: 'user_root', constraints: lambda { |request| !request.env['warden'].user.user? }
+  root to: 'systems#system', as: 'administrator_root', constraints: lambda { |request| !request.env['warden'].user.administrator? }
   
   #resources :users_sessions
   #match 'login' => 'user_sessions#new', as: login
