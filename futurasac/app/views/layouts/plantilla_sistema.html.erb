@@ -42,6 +42,11 @@
 		<header class="header_sistema">
 			<div>
 				<%= image_tag("logo.png", :alt => "") %>
+				<% if user_signed_in? %>
+					<div style="float: right; color: #00008B;">Bienvenido <%= current_user.name %>&nbsp&nbsp&nbsp</div>
+				<% else %>
+				    <div></div>
+				<% end %>
 			</div>
 		</header>
 		<div class="cuerpo_sistema">

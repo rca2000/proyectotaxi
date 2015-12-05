@@ -28,7 +28,7 @@ class DistrictsController < ApplicationController
   # POST /districts
   # POST /districts.json
   def create
-    @district = District.new(district_params)
+    @district = current_user.districts.new(district_params)
 
     respond_to do |format|
       if @district.save

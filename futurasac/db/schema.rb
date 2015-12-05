@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151204175332) do
+ActiveRecord::Schema.define(version: 20151204235107) do
 
   create_table "districts", force: :cascade do |t|
     t.string   "description", limit: 255
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 20151204175332) do
   end
 
   add_index "districts", ["user_id"], name: "index_districts_on_user_id", using: :btree
+
+  create_table "rates", force: :cascade do |t|
+    t.integer  "price",          limit: 4
+    t.string   "district_start", limit: 255
+    t.string   "district_end",   limit: 255
+    t.boolean  "state"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "",          null: false
